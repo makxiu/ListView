@@ -1,0 +1,32 @@
+﻿<Window x:Class="ListView.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListView"
+        mc:Ignorable="d"
+        Title="Produkt" Height="220" Width="350">
+    <Grid x:Name="gridProdukt">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Symbol: " Grid.Row="0" Grid.Column="0" Margin="5,5,5,5"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Margin="5,5,5,5" Text="{Binding Symbol}"/>
+        <Label Content="Nazwa: " Grid.Row="1" Grid.Column="0" Margin="5,5,5,5"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Margin="5,5,5,5" Text="{Binding Nazwa}"/>
+        <Label Content="Liczba Sztuk: " Grid.Row="2" Grid.Column="0" Margin="5,5,5,5"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Margin="5,5,5,5" Text="{Binding LiczbaSztuk}"/>
+        <Label Content="Magazyn: " Grid.Row="3" Grid.Column="0" Margin="5,5,5,5"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Margin="5,5,5,5" Text="{Binding Magazyn}"/>
+        <Button x:Name="btnPotwierdz" Grid.Row="4"  Grid.Column="1" Margin="0,4,0,4" MinWidth="120" HorizontalAlignment="Center" Content="Potwierdź" Click="btnPotwierdz_Click" Width="127"/>
+    </Grid>
+</Window>
